@@ -1,0 +1,12 @@
+# These are the Google Web Fonts we use:
+Noto Serif
+	400
+	700
+	400italic
+Roboto Slab
+	300
+	400
+	700
+Yanone Kaffeesatz
+	400
+	700
