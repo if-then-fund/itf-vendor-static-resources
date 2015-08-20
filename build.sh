@@ -20,6 +20,9 @@ cp /tmp/font-awesome/font-awesome-$FONTAWESOME/css/font-awesome.min.css static/c
 cp /tmp/font-awesome/font-awesome-$FONTAWESOME/fonts/* static/fonts
 rm -rf /tmp/font-awesome
 
+# other resources
+wget -qO static/js/jquery.payment.js https://raw.githubusercontent.com/stripe/jquery.payment/3dbada6a8c7fbb0d13ac121d0581a738d9576f53/lib/jquery.payment.js
+
 # webfonts
 webfont-dl \
 	"http://fonts.googleapis.com/css?family=`cat fonts.txt | python3 fonts.py`" \
