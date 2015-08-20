@@ -22,6 +22,7 @@ rm -rf /tmp/font-awesome
 
 # other resources
 wget -qO static/js/jquery.payment.js https://raw.githubusercontent.com/stripe/jquery.payment/3dbada6a8c7fbb0d13ac121d0581a738d9576f53/lib/jquery.payment.js
+wget -qO static/js/mailcheck.min.js https://raw.githubusercontent.com/mailcheck/mailcheck/v1.1.1/src/mailcheck.min.js
 
 # webfonts
 webfont-dl \
