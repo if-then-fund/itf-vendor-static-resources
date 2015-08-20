@@ -11,6 +11,15 @@ wget -O static/js/bootstrap.min.js https://maxcdn.bootstrapcdn.com/bootstrap/$BO
 wget -4 -O static/js/jquery.min.js https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js
 wget -4 -O static/js/moment.min.js https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js
 
+# font awesome
+FONTAWESOME=4.4.0
+wget -O /tmp/font-awesome.zip https://fortawesome.github.io/Font-Awesome/assets/font-awesome-$FONTAWESOME.zip
+rm -rf /tmp/font-awesome
+unzip -q -d /tmp/font-awesome /tmp/font-awesome.zip
+cp /tmp/font-awesome/font-awesome-$FONTAWESOME/css/font-awesome.min.css static/css
+cp /tmp/font-awesome/font-awesome-$FONTAWESOME/fonts/* static/fonts
+rm -rf /tmp/font-awesome
+
 # webfonts
 webfont-dl \
 	"http://fonts.googleapis.com/css?family=`cat fonts.txt | python3 fonts.py`" \
