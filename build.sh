@@ -2,10 +2,15 @@
 mkdir -p static/css static/js static/fonts
 
 # bootstrap
-BOOTSTRAP=3.3.0
-wget -O static/css/bootstrap.min.css https://maxcdn.bootstrapcdn.com/bootstrap/$BOOTSTRAP/css/bootstrap.min.css
-wget -O static/css/bootstrap-theme.min.css https://maxcdn.bootstrapcdn.com/bootstrap/$BOOTSTRAP/css/bootstrap-theme.min.css
-wget -O static/js/bootstrap.min.js https://maxcdn.bootstrapcdn.com/bootstrap/$BOOTSTRAP/js/bootstrap.min.js
+BOOTSTRAP=3.3.5
+wget -O /tmp/bootstrap.zip https://github.com/twbs/bootstrap/releases/download/v$BOOTSTRAP/bootstrap-$BOOTSTRAP-dist.zip
+rm -rf /tmp/bootstrap
+unzip -q -d /tmp/bootstrap /tmp/bootstrap.zip
+cp /tmp/bootstrap/bootstrap-$BOOTSTRAP-dist/css/bootstrap.min.css static/css/bootstrap.min.css
+cp /tmp/bootstrap/bootstrap-$BOOTSTRAP-dist/css/bootstrap-theme.min.css static/css/bootstrap-theme.min.css
+cp /tmp/bootstrap/bootstrap-$BOOTSTRAP-dist/js/bootstrap.min.js static/js/bootstrap.min.js
+cp /tmp/bootstrap/bootstrap-$BOOTSTRAP-dist/fonts/* static/fonts/
+rm -rf /tmp/bootstrap
 
 # jquery, etc.
 wget -4 -O static/js/jquery.min.js https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js
